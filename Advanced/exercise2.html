@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<body>
+    
+    <script>
+        let people = ["Greg", "Mary", "Devon","James"];
+        // Remove Gred from the array
+        people.shift();
+        // Add Matt to the front of the array
+        people.unshift("Matt");
+        // Remove James from the array
+        people.pop();
+        // Add your name to the end of the array
+        people.push("Christoph");
+        // Make a copy of the array using slice. The copy should NOT include "Mary" or "Matt"
+        let myArray = people.slice(2)
+        // document.write(myArray);
+
+        //Using the indexOf method, find the index of where "Mary" is located.
+        document.write("The index of Mary is at position: " + people.indexOf("Mary") + "<hr>");
+        // Using the indexOf method, find the index of where "Foo" is located (this should return -1).
+        document.write("The index of Foo is at position: " + people.indexOf("Foo"))
+
+        // Redefine the people variable with the values you started with.
+        let people2 = ["Greg","Mary","Devon","James"];
+        // Using the splice command, remove "Devon" from the array and add "Elizabeth" and "Anna". Your array should look like this when you are done ["Greg", "Mary", "Elizabeth", "Anna", "James"].
+        people2.splice(2,1,"Elizabeth","Anna");
+        document.write("<hr> New array: " + people2);
+
+        //Create a new variable called withBob and set it equal to the people array concatenated with the string of "Bob".
+        let withBob = people2.concat("Bob");
+        document.write("<hr> With Bob: " + withBob);
+    </script>
+</body>
+</html>
